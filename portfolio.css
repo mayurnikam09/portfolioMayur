@@ -1,120 +1,44 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+/* Responsive Styles for All Devices - Fixing Typed Text Cursor Shifting */
+
+/* General Rules */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-body {
-    height: 100vh;
-    scroll-behavior: smooth;
+/* Preserve Original Navbar (Dark background, white links) */
+.navbar {
+    background-color: #000 !important; /* Keep dark */
 }
-
-/* Nav Bar */
 .navbar-nav a {
+    color: white !important; /* Keep white */
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
     text-decoration: none;
-    color: white;
-  }
-  
-  .navbar-nav a:hover {
+}
+.navbar-nav a:hover {
     text-decoration: underline;
-    color: white;
-  }
-  
-  .navbar-brand{
-    color: white;
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
-  
-  .navbar-brand:hover {
-    color: #000;
-  }
-  
-  .navbar-nav .navbar-link {
-    color: #000;
-  }
-  
-  .w-100 {
-    height: 100vh;
-  }
-  
-  .card-body svg {
-    font-size: 500;
-  }
-
-#home {
-    /*background-image: url(image/02-technology.jpg);*/
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    padding-left: 50px;
+    color: white !important;
 }
 
-/* Main Section */
-.main-section {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    padding: 40px;
-}
-
-.main-text {
-    width: 50%;
-    margin-top: 5%;
-    margin-left: 5%;
-}
-
-.main-text h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2rem;
-    color: black;
-    margin-bottom: 20px;
-}
-.main-text h4{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #01411C;
-}
-
-.main-text p {
-    color: black;
-    font-size: 18px;
-}
-
+/* Preserve Original Download Resume Button */
 .main-text button {
-    margin: 40px 0;
     background: black;
     padding: 10px 20px;
     border: 2px solid rgb(0, 191, 255);
     cursor: pointer;
     border-radius: 10px;
-}
-
-.main-text button a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
-
 .main-text button:hover {
     border: 5px solid rgb(0, 191, 255);
     background-color: black;
     text-decoration: underline;
 }
 
-.main-image {
-    width: 50%;
-    margin-top: 10px;
-}
-
+/* Preserve Original Main Image */
 .main-image img {
     width: 70%;
     background-color: white;
@@ -122,48 +46,134 @@ body {
     margin-left: 20%;
     border: 3px solid rgb(0, 191, 255);
 }
-.typed-element {
-    font-size: 50px;
-    color: #333;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: inline;
+
+/* Home Section - Fix Navbar Overlap, Typed Text Shaking, and Cursor Shifting */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding-left: 50px;
+    padding-top: 80px; /* Account for fixed navbar */
 }
 
-/* About Section Styles */
+.main-text h1 {
+    min-height: 70px; /* Fixed height to prevent shaking */
+    line-height: 1.2; /* Consistent line height */
+}
+
+.typed-element {
+    white-space: nowrap; /* Prevent text wrapping to keep cursor on one line */
+}
+
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 100px 10px 20px; /* Extra top padding for mobile navbar */
+    }
+    .main-text {
+        width: 100%;
+        margin: 0;
+    }
+    .main-text h2 {
+        font-size: 1.5rem;
+    }
+    .main-text p {
+        font-size: 16px;
+    }
+    .main-text button {
+        margin: 20px 0;
+        padding: 8px 16px;
+    }
+    .main-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .main-image img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .typed-element {
+        font-size: 30px;
+        white-space: nowrap; /* Ensure no wrapping on mobile */
+    }
+    .main-text h1 {
+        min-height: 50px; /* Smaller fixed height for mobile */
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #home {
+        padding: 100px 20px 20px; /* Adjust for tablet navbar */
+    }
+    .main-text {
+        width: 60%;
+    }
+    .main-image {
+        width: 40%;
+    }
+    .typed-element {
+        font-size: 40px;
+        white-space: nowrap; /* Ensure no wrapping on tablet */
+    }
+    .main-text h1 {
+        min-height: 60px; /* Medium fixed height for tablet */
+        line-height: 1.2;
+    }
+}
+
+/* About Section */
 .about {
     display: flex;
     align-items: center;
-    /*background-image: linear-gradient(#8FBC8B, white);*/
     justify-content: space-between;
     width: 100%;
     height: fit-content;
 }
 
-.about .my-heading {
-    color: #00416A;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 4vw;
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .my-heading {
+        font-size: 2rem;
+    }
+    .about-text {
+        width: 100%;
+        font-size: 16px;
+    }
+    .about-image img {
+        width: 100%;
+        max-width: 400px;
+        padding: 1rem;
+        margin: 0 auto;
+    }
 }
 
-.about .about-text {
-    width: 500px;
-    color: black;
-    font-size: large;
-    font-weight: 100px;
-}
-
-.about .about-image img {
-    height: 630px;
-    width: 600px;
-    padding: 5rem 5rem 5rem 1rem;
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about {
+        padding: 20px;
+    }
+    .my-heading {
+        font-size: 3rem;
+    }
+    .about-text {
+        width: 50%;
+    }
+    .about-image img {
+        width: 50%;
+    }
 }
 
 /* Skill Section */
 .skill .headline h1 {
     text-align: center;
-    height: fit-content;
-    align-items: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 5vw;
     color: #00416A;
     padding-top: 80px;
@@ -172,8 +182,6 @@ body {
 .skill .headline p {
     text-align: center;
     font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    align-items: left;
 }
 
 .skill .techcontainer {
@@ -193,59 +201,99 @@ body {
 
 .skill .techcontainer h1 {
     color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 3vw;
 }
 
-.skill .techcontainer h6{
-    color: black;
+@media (max-width: 768px) {
+    .skill .headline h1 {
+        font-size: 2rem;
+        padding-top: 40px;
+    }
+    .skill .headline p {
+        font-size: 16px;
+    }
+    .techcontainer {
+        padding: 15px;
+        max-width: 100%;
+    }
+    .techcontainer h1 {
+        font-size: 2rem;
+    }
+    .techcontainer img {
+        max-width: 80px;
+    }
 }
 
-/*Project*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .skill .headline h1 {
+        font-size: 3rem;
+    }
+    .techcontainer {
+        max-width: 800px;
+    }
+}
 
-.project h1{
+/* Project Section */
+.project h1 {
     text-align: center;
     padding-top: 80px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #00416A;
     font-size: 4vw;
     margin-bottom: 30px;
 }
 
-.project .projectinfo{
-    display: flex; 
+.project .projectinfo {
+    display: flex;
     flex-wrap: wrap;
-    gap: 15px; 
+    gap: 15px;
     justify-content: center;
 }
 
-.project .projectinfo .card{
-    margin: 0; 
+.project .projectinfo .card {
+    margin: 0;
     border-radius: 10px;
-    box-sizing: border-box; 
 }
 
-/*Resume Section*/
-.resume .resumeimage{
-    height: 100px;
+@media (max-width: 768px) {
+    .project h1 {
+        font-size: 2rem;
+        padding-top: 40px;
+        margin-bottom: 20px;
+    }
+    .projectinfo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .projectinfo .card {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
 }
 
-/*Contact Me*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project h1 {
+        font-size: 3rem;
+    }
+    .projectinfo .card {
+        width: 45%;
+    }
+}
 
-.contact h1{
+/* Contact Section */
+.contact h1 {
     text-align: center;
     color: #00416A;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     padding-top: 80px;
     font-size: 4vw;
 }
+
 .contactinfo {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Space between the boxes */
+    gap: 20px;
     max-width: 1000px;
-    margin: 0 auto; /* Center the container */
-    flex-wrap: wrap; /* Wrap boxes on smaller screens */
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 #contactform {
@@ -259,49 +307,78 @@ body {
     padding-top: 10px;
 }
 
-.contact .contactform , h4{
-    font-family: 'Times New Roman', Times, serif;
-    padding: 5px;
-    color: #006400;
-}
-
-.contact .contactform , input[type="email"],input[type="number"],input[type="text"],textarea{
+#contactform input[type="email"],
+#contactform input[type="number"],
+#contactform input[type="text"],
+#contactform textarea {
     border: 1px solid black;
     width: 80%;
     height: 40px;
-    font-family: 'Times New Roman', Times, serif;
     border-radius: 5px;
 }
 
-.contact .contactform , textarea{
-    width: 80%;
-    border: 1px solid black;
-    font-family: 'Times New Roman', Times, serif;
+#contactform textarea {
     height: 120px;
-    border-radius: 5px;
 }
 
-.contactform .contactform , input[type="submit"]{
+#contactform input[type="submit"] {
     width: 81%;
     height: 35px;
     background-color: #317873;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
     border-radius: 5px;
-    text-decoration: none;
     border: 0;
 }
 
-/* Footer Styles */
+@media (max-width: 768px) {
+    .contact h1 {
+        font-size: 2rem;
+        padding-top: 40px;
+    }
+    .contactinfo {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    #contactform {
+        width: 100%;
+        max-width: 400px;
+    }
+    #contactform input[type="email"],
+    #contactform input[type="number"],
+    #contactform input[type="text"],
+    #contactform textarea {
+        width: 90%;
+    }
+    #contactform input[type="submit"] {
+        width: 91%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact h1 {
+        font-size: 3rem;
+    }
+    .contactinfo {
+        max-width: 900px;
+    }
+    #contactform {
+        width: 45%;
+    }
+}
+
+/* Footer */
 .footer {
     background-image: url(image/8779025.jpg);
     color: #fff;
     padding: 1rem;
 }
-.footer h4{
+
+.footer h4 {
     color: white;
     font-size: 20px;
 }
+
 .footer-list-items {
     display: flex;
     align-items: center;
@@ -332,4 +409,28 @@ body {
 .footer-menu .footer-menu-list {
     display: flex;
     list-style: none;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 0.5rem;
+    }
+    .footer h4 {
+        font-size: 16px;
+    }
+    .footer-list-items {
+        height: 40px;
+        width: 40px;
+        margin: 0.5rem;
+    }
+    .footer-links {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-list-items {
+        height: 45px;
+        width: 45px;
+    }
 }
