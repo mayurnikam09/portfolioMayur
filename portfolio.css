@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* Nav Bar */
+.navbar-nav a {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navbar-nav a:hover {
+    text-decoration: underline;
+    color: white;
+  }
+  
+  .navbar-brand{
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  .navbar-brand:hover {
+    color: #000;
+  }
+  
+  .navbar-nav .navbar-link {
+    color: #000;
+  }
+  
+  .w-100 {
+    height: 100vh;
+  }
+  
+  .card-body svg {
+    font-size: 500;
+  }
+
+#home {
+    /*background-image: url(image/02-technology.jpg);*/
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding-left: 50px;
+}
+
+/* Main Section */
+.main-section {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 40px;
+}
+
+.main-text {
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.main-text h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+}
+.main-text h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #01411C;
+}
+
+.main-text p {
+    color: black;
+    font-size: 18px;
+}
+
+.main-text button {
+    margin: 40px 0;
+    background: black;
+    padding: 10px 20px;
+    border: 2px solid rgb(0, 191, 255);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.main-text button a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-text button:hover {
+    border: 5px solid rgb(0, 191, 255);
+    background-color: black;
+    text-decoration: underline;
+}
+
+.main-image {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.main-image img {
+    width: 70%;
+    background-color: white;
+    border-radius: 0 50%;
+    margin-left: 20%;
+    border: 3px solid rgb(0, 191, 255);
+}
+.typed-element {
+    font-size: 50px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline;
+}
+
+/* About Section Styles */
+.about {
+    display: flex;
+    align-items: center;
+    /*background-image: linear-gradient(#8FBC8B, white);*/
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+}
+
+.about .my-heading {
+    color: #00416A;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4vw;
+}
+
+.about .about-text {
+    width: 500px;
+    color: black;
+    font-size: large;
+    font-weight: 100px;
+}
+
+.about .about-image img {
+    height: 630px;
+    width: 600px;
+    padding: 5rem 5rem 5rem 1rem;
+}
+
+/* Skill Section */
+.skill .headline h1 {
+    text-align: center;
+    height: fit-content;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5vw;
+    color: #00416A;
+    padding-top: 80px;
+}
+
+.skill .headline p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: left;
+}
+
+.skill .techcontainer {
+    background-color: white;
+    box-shadow: 2px 3px 9px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.skill .techcontainer img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.skill .techcontainer h1 {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3vw;
+}
+
+.skill .techcontainer h6{
+    color: black;
+}
+
+/*Project*/
+
+.project h1{
+    text-align: center;
+    padding-top: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #00416A;
+    font-size: 4vw;
+    margin-bottom: 30px;
+}
+
+.project .projectinfo{
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 15px; 
+    justify-content: center;
+}
+
+.project .projectinfo .card{
+    margin: 0; 
+    border-radius: 10px;
+    box-sizing: border-box; 
+}
+
+/*Resume Section*/
+.resume .resumeimage{
+    height: 100px;
+}
+
+/*Contact Me*/
+
+.contact h1{
+    text-align: center;
+    color: #00416A;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 80px;
+    font-size: 4vw;
+}
+.contactinfo {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between the boxes */
+    max-width: 1000px;
+    margin: 0 auto; /* Center the container */
+    flex-wrap: wrap; /* Wrap boxes on smaller screens */
+}
+
+#contactform {
+    box-shadow: 2px 3px 9px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    background-color: white;
+    width: 460px;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.contact .contactform , h4{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    color: #006400;
+}
+
+.contact .contactform , input[type="email"],input[type="number"],input[type="text"],textarea{
+    border: 1px solid black;
+    width: 80%;
+    height: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+}
+
+.contact .contactform , textarea{
+    width: 80%;
+    border: 1px solid black;
+    font-family: 'Times New Roman', Times, serif;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.contactform .contactform , input[type="submit"]{
+    width: 81%;
+    height: 35px;
+    background-color: #317873;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 0;
+}
+
+/* Footer Styles */
+.footer {
+    background-image: url(image/8779025.jpg);
+    color: #fff;
+    padding: 1rem;
+}
+.footer h4{
+    color: white;
+    font-size: 20px;
+}
+.footer-list-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 50%;
+    background-color: #53C8B6;
+}
+
+.footer-links {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-menu {
+    padding: 0 5rem;
+}
+
+.footer-menu .footer-menu-list {
+    display: flex;
+    list-style: none;
+}
